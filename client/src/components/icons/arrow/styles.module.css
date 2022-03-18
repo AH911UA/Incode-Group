@@ -1,0 +1,14 @@
+
+.arrow {
+    position: relative;
+   
+}
+
+.up {
+    fill: #137333;
+}
+
+.down {
+    fill: #c5221f;
+    transform: rotate(180deg);
+}

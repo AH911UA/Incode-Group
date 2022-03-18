@@ -1,0 +1,40 @@
+.card {
+    display: flex;
+    gap: 5px;
+    -webkit-box-align: center;
+    box-align: center;
+    align-items: center;
+    padding: 6px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    white-space: nowrap;
+}
+.card p {
+    font-size: 12px;
+}
+
+.card__arrow {
+    padding: 6px;
+    border-radius: 8px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.card__main_data {
+    
+}
+
+.card__main_data h3 {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+  
+}
+ 
+.card__secondary_data {
+    padding-left: 5px;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
