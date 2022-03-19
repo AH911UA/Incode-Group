@@ -9,6 +9,10 @@
     border-radius: 8px;
     border: 1px solid #dadce0;
     white-space: nowrap;
+    cursor: pointer;
+}
+.card_select {
+    border: 1px solid#2196F3;
 }
 .card p {
     font-size: 12px;
