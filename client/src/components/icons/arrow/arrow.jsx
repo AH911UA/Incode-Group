@@ -1,10 +1,11 @@
 import styles from './styles.module.css';
 
 export default function Arrow(props) {
-    const { width = 16, height = 16, direction = 'up' } = props;
+    const { width = 16, height = 16, direction = 'up', style = {} } = props;
 
     return (
         <svg focusable="false" viewBox="0 0 24 24"
+            style={style}
             className={`arrow ${styles[direction]}`}
             width={width}
             height={height}

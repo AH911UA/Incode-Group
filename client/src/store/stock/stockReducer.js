@@ -9,29 +9,24 @@ export const asyncStock = createAsyncThunk(
 export const stockSlice = createSlice({
     name: 'stock',
     initialState: {
-        data: [{
-            ticker: "",
-            exchange: "",
-            price: null,
-            change: null,
-            change_percent: null,
-            dividend: null,
-            yield: null,
-            last_trade_time: null
-        }]
+        data: [],
+        currTicker: ""
     },
     reducers: {
         setStock: (state, action) => {
-            state.data = action.payload;
+            state.data.push(action.payload);
+        },
+        setCurrTicker: (state, action) => {
+            state.currTicker = action.payload;
         }
     },
     extraReducers: {
         [asyncStock.fulfilled]: (state, action) => {
-            state.data = action.payload
+            state.data.push(action.payload);
         }
     }
 })
 
-export const { setStock } = stockSlice.actions
+export const { setStock, setCurrTicker } = stockSlice.actions
 
 export default stockSlice.reducer
