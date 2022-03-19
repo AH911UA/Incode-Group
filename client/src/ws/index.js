@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-import { setStock } from "../store/stock/stockReducer";
+import { asyncStock } from "../store/stock/stockReducer";
 
 const ENDPOINT = 'http://localhost:4000';
 const socket = io(ENDPOINT);
@@ -10,7 +10,7 @@ export default function ws(dispatch) {
     
     socket.on('ticker', (data) => {
         if (Array.isArray(data)) {
-            dispatch(setStock(data));
+            dispatch(asyncStock(data));
         }
     });
 
